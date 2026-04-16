@@ -10,27 +10,27 @@
   height: 100px;
   padding: 0 60px;
   transition: all 0.5s;
-  background: rgba(255,255,255,0);
+  background: rgba(255, 255, 255, 0);
   /* background-color: steelblue; */
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 /* 스크롤할 때 헤더 변경 */
-.headerd.active{
-  height: 80px;
+.headerd.active {
+  height: 70px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 10px 0 15px 0 rgba(0, 0, 0, 0.1);
 }
 /* 스크롤할 때 로고 변경 */
-.header.active .logo{
+.header.active .logo {
   background: url(../images/logo.png) no-repeat center;
   background-size: cover;
 }
 /* 스크롤할 때 메뉴 변경 */
-.header.active .gnb >li >a{
+.header.active .gnb > li > a {
   color: #222;
 }
 /* 스크롤할 때 메뉴 밑줄 변경 */
-.header.active .gnb > li > a > span::after{
+.header.active .gnb > li > a > span::after {
   background-color: #222;
 }
 .logo {
@@ -89,5 +89,26 @@
 }
 /* 모바일 gnb */
 .nav-mb {
-  display: none;
+  /* display: none; */
+  position: absolute;
+  top: 70px;
+  left: 100%;
+  width: 100%;
+  height: calc(100vh - 70px);
+  padding-top: 50px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+.nav-mb-gnb a {
+  display: flex;
+  align-items: center;
+  padding: 15px 70px 15px 40px;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e5e5;
+}
+.nav-mb.active{
+  left: 0%;
+  opacity: 1;
 }
