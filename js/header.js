@@ -1,8 +1,8 @@
 window.addEventListener("load", () => {
   // 스크롤할 때
   const header = document.querySelector(".header");
-  const mbt = document.querySelector(".mbt")
-  const navMb = document.querySelector(".nav-mb")
+  const mbt = document.querySelector(".mbt");
+  const navMb = document.querySelector(".nav-mb");
   let scy = 0;
   // 1. 스크롤바의 픽셀 위치값을 파악해서
   // scy = window.document.documentElement.scrollTop;
