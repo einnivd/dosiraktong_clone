@@ -15,7 +15,7 @@
     width: 95%;
     max-width: 1420px;
     margin: auto;
-    background-color: thistle;
+    /* background-color: thistle; */
 }
 h1, h2, h3, h4, h5, h6, a, p, th, td, div, span, label, input, select, textarea, button, li, caption {
     font-family: "Poppins", "Pretendard", sans-serif;
