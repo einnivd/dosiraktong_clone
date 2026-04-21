@@ -99,8 +99,25 @@
     <script src="js/swiper.js"></script>
     <script src="js/header.js"></script>
     <script src="js/business.js"></script>
+    <script src="js/modal.js"></script>
   </head>
   <body>
+    <!-- modal -->
+     <div class="modal-wrap">
+      <div class="modal-box">
+        <!-- logo -->
+        <div class="modalLogo"></div>
+         <p class="modalNotice">
+          상단 시각화 스와이퍼 적용, 상단 스크롤 기능 스와이퍼 페이지 기능 추가, <br>
+          grid 사용<br>
+          서비스 하단 반응형 waypoint적용, gotop버튼 기능 / 보기 스와이퍼 기능 추가 
+         </p>
+         <!-- modal close -->
+          <div class="modalClose">
+            <i>× Close</i>
+          </div>
+      </div>
+     </div>
     <!-- 안내창 -->
     <!-- 위로 가기 버튼 -->
     <button class="gotop">
@@ -157,24 +174,86 @@
           </ul>
         </div>
       </header>
-      <!-- 비주얼 -->
+       <!-- 비주얼 -->
       <section class="visual">
+        <!-- Swiper -->
         <div class="swiper sw-visual">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="visual-box visual-bg-1"></div>
+              <div class="visual-box visual-bg-1">
+                <div class="inner">
+                  <h2>도시락통</h2>
+                  <p>도시락으로 다 통한다, 해외데이터는 도시락통</p>
+                  <a href="#">
+                    <span>자세히 보기</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="swiper-slide">
-              <div class="visual-box visual-bg-2"></div>
+              <div class="visual-box visual-bg-2">
+                <div class="inner">
+                  <h2>와이파이도시락</h2>
+                  <p>
+                    여럿이 함께 쓰는 대용량 데이터, 장거리, 장기 할인은 기본
+                  </p>
+                  <a href="#">
+                    <span>자세히보기</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="swiper-slide">
-              <div class="visual-box visual-bg-3"></div>
+              <div class="visual-box visual-bg-3">
+                <div class="inner">
+                  <h2>도시락유심</h2>
+                  <p>믿을 수 있는 현지 통신사의 선불유심, 유심도 도시락으로!</p>
+
+                  <a href="#">
+                    <span>자세히보기</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="swiper-slide">
-              <div class="visual-box visual-bg-4"></div>
+              <div class="visual-box visual-bg-4">
+                <div class="inner">
+                  <h2>도시락eSIM</h2>
+                  <p>
+                    요금제, 통신사 변경 없이 데이터 충전가능한 아이폰유저를 위한
+                    가장 간편한 로밍
+                  </p>
+
+                  <a href="#">
+                    <span>자세히보기</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <!-- Swiper-visual 컨트롤(네비게이션) -->
+         <div class="sw-visual-control">
+          <button class="sw-visual-prev">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <button class="sw-visual-next">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+         </div>
+         <!-- swiper-visual 페이지네이션 -->
+          <div class="sw-visual-pg">
+            <ul class="sw-visual-pg-list">
+              <!-- swiper.js -->
+            </ul>
+          </div>
       </section>
       <!-- 서비스 -->
       <section class="service">

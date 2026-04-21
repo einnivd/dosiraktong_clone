@@ -1,9 +1,43 @@
 .visual{
     position: relative;
     width: 100%;
-    /* height: 100vh; */
+    height: 970px;
     aspect-ratio: 192/97;
     background-color: rgb(192, 140, 192);
+}
+.visual-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: plum; */
+}
+.visual-box .inner h2{
+    line-height: 1.3;
+    /* font-size: 74px; */
+    /* clamp( 최소값, 반응값, 최대값) */
+    font-size: clamp(36px , 5vw , 74px);
+    font-family: "Godo", "Notokr";
+    color: #fff;
+}
+.visual-box .inner p{
+    margin-top: 10px;
+     font-size: clamp(17px , 5vw , 22px);
+    font-weight: 500;
+    color: #fff;
+}
+.visual-box .inner a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  height: 65px;
+  /* opacity: 1; */
+  /* visibility: visible; */
+  padding: 0 45px 0 50px;
+  margin-top: 50px;
+  font-size: 17px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 .sw-visual, .swiper-slide, .visual-box{
     width: 100%;
@@ -24,4 +58,87 @@
 .visual-bg-4{
     background: url(../images/main_visual_4.jpg) no-repeat center;
     background-size: cover;
+}
+/* Swiper-visual 컨트롤(네비게이션) */
+.sw-visual-control{
+    position: absolute;
+    top: calc(50% - 230px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    display: flex;
+    gap: 1%;
+    width: 95%;
+    max-width: 1420px;
+    cursor: pointer;
+    /* background-color: yellowgreen; */
+}
+.sw-visual-control button{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    display: flex;
+     color: #fff;
+    background-color: rgba(255,255,255,0.3);
+}
+.sw-visual-control button i{
+    opacity: 0.5;
+    transition: all 0.3s;
+    font-size: 24px;
+}
+.sw-visual-control button:hover i{
+    opacity: 1;
+}
+/* 페이지네이션 */
+.sw-visual-pg{
+    position: absolute;
+    top: calc(50% + 230px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1420px;
+    z-index: 9;
+}
+.sw-visual-pg-list{
+    display: flex;
+    position: relative;
+}
+.sw-visual-pg-list li{
+    position: relative;
+    width: 85px;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.sw-visual-pg-list li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0.4;
+}
+.sw-visual-pg-list li::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    /* 슬라이드의 모션 속도를 transition 맞춘다. (1500 = 1.5s) */
+    /*  speed: 1500 */
+    
+}
+.sw-visual-pg-list li.active::after{
+    width: 100%;
+    transition: all 1.5s; 
 }
